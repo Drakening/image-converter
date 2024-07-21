@@ -1,0 +1,99 @@
+.image-uploader {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-uploader .dropzone {
+  border: 2px dashed #4a4a4a;
+  padding: 40px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.image-uploader .dropzone:hover {
+  border-color: #76c7c0;
+}
+
+.image-uploader .dropzone p {
+  color: #bbbbbb;
+}
+
+.image-uploader .file-list {
+  margin-top: 20px;
+}
+
+.image-uploader .file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.image-uploader .file-item .thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.image-uploader .file-item .file-details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-uploader .file-item .file-details p {
+  margin: 0 10px;
+  color: #ffffff;
+}
+
+.image-uploader select,
+.image-uploader button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #4a4a4a;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.image-uploader select:hover,
+.image-uploader button:hover {
+  background-color: #444444;
+}
+
+.image-uploader button {
+  border: 1px solid #76c7c0;
+}
+
+.image-uploader button:hover {
+  background-color: #76c7c0;
+}
+
+.image-uploader .remove-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #e74c3c;
+  background-color: #c0392b;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.image-uploader .remove-button:hover {
+  background-color: #e74c3c;
+}
