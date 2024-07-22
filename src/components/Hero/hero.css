@@ -2,21 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #121212;
-    color: #ffffff;
     text-align: center;
-    padding: 0 20px;
-  }
-  
-  .hero-content {
-    max-width: 600px;
   }
   
   .hero-section h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #76c7c0;
+    line-height: 72px;
+    font-size: 3.75rem;
+    text-align: center;
+    color: rgb(29, 29, 29);
   }
   
   .hero-section p {

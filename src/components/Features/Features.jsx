@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCog, FaFileAlt, FaShieldAlt } from 'react-icons/fa';
-import './FeaturesSection.css';
+import './Features.css';
 
 const Features = () => {
   return (

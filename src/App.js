@@ -1,8 +1,10 @@
 import React from 'react';
 import Hero from './components/Hero/Hero'
 import ImageUploader from './components/Converter/ImageUploader';
-import FeaturesSection from './components/Features/FeaturesSection';
+import ImageComparison from './components/Comparison/ImageComparison'
+import Features from './components/Features/Features';
 import Footer from './components/Footer/Footer';
+import './App.css';
 
 
 function App() {
@@ -10,7 +12,8 @@ function App() {
     <div className="App">
       <Hero />
       <ImageUploader />
-      <FeaturesSection />
+      <ImageComparison />
+      <Features />
       <Footer />
     </div>
   );

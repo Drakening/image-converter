@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import './Footer.css';
+import './footer.css';
 
 const Footer = () => {
   return (
