@@ -34,6 +34,7 @@
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .image-uploader .file-item .thumbnail {
@@ -96,4 +97,24 @@
 
 .image-uploader .remove-button:hover {
   background-color: #e74c3c;
+}
+
+.image-uploader .progress-container {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 10px;
+  background-color: #444444;
+  border-radius: 5px;
+}
+
+.image-uploader .progress-bar {
+  height: 100%;
+  background-color: #76c7c0;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  line-height: 10px;
+  font-size: 10px;
 }

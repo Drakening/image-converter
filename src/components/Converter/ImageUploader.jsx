@@ -10,7 +10,8 @@ const ImageUploader = () => {
     const newFiles = acceptedFiles.map(file => ({
       file,
       format: 'png',
-      convertedFile: null
+      convertedFile: null,
+      progress: 0,
     }));
     setFiles(prevFiles => [...prevFiles, ...newFiles]);
   }, []);
@@ -36,9 +37,17 @@ const ImageUploader = () => {
     try {
       const response = await axios.post('http://localhost:5000/convert', formData, {
         responseType: 'blob',
+        onUploadProgress: (progressEvent) => {
+          const progress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+          const newFiles = [...files];
+          newFiles[index].progress = progress;
+          setFiles(newFiles);
+        },
       });
+
       const newFiles = [...files];
       newFiles[index].convertedFile = URL.createObjectURL(response.data);
+      newFiles[index].progress = 100;
       setFiles(newFiles);
     } catch (error) {
       console.error('Error converting file:', error);
@@ -78,6 +87,11 @@ const ImageUploader = () => {
               )}
             </div>
             <button className="remove-button" onClick={() => handleRemove(index)}>X</button>
+            <div className="progress-container">
+              <div className="progress-bar" style={{ width: `${fileWrapper.progress}%` }}>
+                {fileWrapper.progress}%
+              </div>
+            </div>
           </div>
         ))}
       </div>
