@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="hero-section">
       <div className="hero-content">
         <h1><Flip words={words} /> Image Converter</h1>
-        <p>Convert images in bulk without losing their quality. It’s fast, free & easy-to-use!</p>
+        <p>Convert images in seconds without losing its quality and installing any software or plugins!</p>
       </div>
     </section>
   );

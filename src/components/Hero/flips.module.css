@@ -7,10 +7,6 @@
   padding-right: 2px;
 }
 
-.flipWords.dark {
-  color: var(--neutral-100);
-}
-
 .letter {
   display: inline-block;
 }

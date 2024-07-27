@@ -1,0 +1,98 @@
+
+.steps-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-bottom: 6rem;
+    padding: 0 8rem;
+}
+.stepsHeading {
+    max-width: 42rem;
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    line-height: normal;
+    text-align: center;
+    font-weight: 700;
+}
+.tileDescription {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: rgb(98 101 112)
+}
+.stepsCols {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-rows: repeat(1,minmax(0,1fr));
+    gap: 1rem;
+}
+.stepCard {
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+    border-radius: .5rem;
+    background-image: radial-gradient(145.27% 163.23% at -29.83% -32.23%,#ffdedd 0,snow 100%);
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+.stepCard2 {
+    background-image: radial-gradient(145.57% 163.54% at -27.81% -29.39%,#defffd 0,#cbf0ee .01%,#f5fffe 100%);
+}
+.stepCard3{
+    background-image: radial-gradient(160.41% 180.06% at -27.81% -29.39%,#e1dfff 0,#e0ddff .01%,#fafaff 100%);
+}
+.cardTop {
+    padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.stepNum {
+    padding: 6px 10px;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: rgb(29 29 29);
+    background-color: #0000001a;
+    border-radius: 6px;
+}
+.imageCont {
+    padding: 0 1.75rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.imageCont img {
+    color: transparent;
+    max-width: 220px;
+    height: auto;
+
+}
+.cardBottom {
+    padding: 1.5rem;
+    gap: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.cardBottom h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+.cardBottom p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: rgb(98 101 112);
+    font-weight: 500;
+}

@@ -1,8 +1,7 @@
 .footer {
-    background-color: #1e1e1e;
-    color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    background-color: rgb(21, 21, 21);
   }
   
   .footer-links {
@@ -10,18 +9,14 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    color: #fff;
   }
   
   .footer-link {
-    color: #76c7c0;
     margin: 0 15px;
     cursor: pointer;
-    transition: color 0.2s;
   }
-  
-  .footer-link:hover {
-    color: #ffffff;
-  }
+
   
   .footer-social {
     display: flex;
@@ -29,13 +24,8 @@
   }
   
   .footer-social-link {
-    color: #76c7c0;
     margin: 0 10px;
     font-size: 1.5em;
-    transition: color 0.2s;
-  }
-  
-  .footer-social-link:hover {
-    color: #ffffff;
+    color: #fff;
   }
   

@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-links">
-        <ScrollLink to="about-us" smooth={true} duration={500} className="footer-link">About Us</ScrollLink>
-        <ScrollLink to="contact-us" smooth={true} duration={500} className="footer-link">Contact Us</ScrollLink>
+        <ScrollLink to="about" smooth={true} duration={500} className="footer-link">About Us</ScrollLink>
+        <ScrollLink to="contact" smooth={true} duration={500} className="footer-link">Contact Us</ScrollLink>
         <ScrollLink to="privacy" smooth={true} duration={500} className="footer-link">Privacy</ScrollLink>
         <ScrollLink to="terms" smooth={true} duration={500} className="footer-link">Terms</ScrollLink>
       </div>

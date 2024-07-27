@@ -3,17 +3,31 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 4rem 0;
   }
-  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+  }
   .hero-section h1 {
     line-height: 72px;
-    font-size: 3.75rem;
+    font-size: 5rem;
+    font-weight: 700;
     text-align: center;
-    color: rgb(29, 29, 29);
+    margin-bottom: 1.5rem;
+    color: #1d1d1d;
   }
   
   .hero-section p {
-    font-size: 1.2em;
-    color: #bbbbbb;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    max-width: 42rem;
+    text-align: center;
+    color: #626570;
   }
   

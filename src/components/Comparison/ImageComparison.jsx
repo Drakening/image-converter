@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Features from '../Features/Features'
 import './ImageComparison.css';
 import beforeImage from '../../assets/before.jpg';
 import afterImage from '../../assets/after.jpg';
@@ -11,8 +12,11 @@ const ImageComparison = () => {
   };
 
   return (
-    <div>
-      <h1>Compare These Images</h1>
+    <section>
+    <div className="Heading">
+            <h1 className="Title">Features</h1>
+            <p className="Description">With Chameleon you can convert images without losing quality. You do not need to pay any monthly subscriptions fees. Ir's free and most importantly secure.</p>
+        </div>
       <div className="image-comparison">
         <div className="images-container">
           <img
@@ -55,7 +59,8 @@ const ImageComparison = () => {
           />
         </div>
       </div>
-    </div>
+      <Features />
+    </section>
   );
 };
 

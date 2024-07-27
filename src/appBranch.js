@@ -24,28 +24,3 @@
 // }
 
 // export default App;
-
-
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navbar } from './components/Navbar/Navbar'
-import Homepage from './Homepage';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
-
-import './App.css';
-
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Homepage />} /> 
-        <Route path="/About" element={<About />} /> 
-        <Route path="/Contact" element={<Contact />} /> 
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
