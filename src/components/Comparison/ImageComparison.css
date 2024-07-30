@@ -70,4 +70,29 @@
     color: #fff;
     transform: translate(-50%, -50%) rotateZ(90deg);
   }
-  
+  /* Mobile Devices */
+@media(max-width: 600px) {
+  .Title {
+    font-size: 26px;
+  }
+
+  .Description {
+    font-size: 16px;
+  }
+
+  .before-image,
+  .after-image {
+    width: 100%;
+  }
+}
+
+/* Small Tablets and Large Phones */
+@media(min-width: 601px) and (max-width: 820px) {
+  .Title {
+    font-size: 2.25rem;
+  }
+
+  .Description {
+    font-size: 18px;
+  }
+}

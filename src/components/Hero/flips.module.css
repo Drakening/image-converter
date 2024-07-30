@@ -10,3 +10,13 @@
 .letter {
   display: inline-block;
 }
+.flipWords {
+  display: inline-block;
+  white-space: pre; /* Preserve spaces in the string */
+}
+
+.letter {
+  display: inline-block;
+  /* Optionally, adjust letter spacing if needed */
+  /* letter-spacing: 0.1em; */
+}

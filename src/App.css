@@ -1,3 +1,5 @@
+@import url('./fonts.css');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +9,7 @@
 body {
     background-color: #fff;
     color: #1d1d1d;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: auto;
     max-width: 1440px;
     display: flex;

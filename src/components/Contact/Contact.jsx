@@ -6,13 +6,13 @@ const Contact = () => {
     <section className="contactUs">
         <div className="contactContainer">
           <div className="contactTitle">
-            Vibrant, Designer and <span className="color">Enigmatic</span>
+          Transforming Images with <span className="color">Chameleon</span>
           </div>
           <div className="description1">
-            If you're seeking something as rare and one-of-a-kind as you are, don't hesitate to reach out to us.
+          Whether you need a quick conversion or a complete image transformation, Chameleon is here to help. Reach out to us for all your image conversion queries.
           </div>
           <div className="description2">
-            <a href="mailto:Chameleon@gmail.com" className="btn dark">Email Us</a>
+            <a href="mailto:Chameleon@gmail.com" className="btn dark">Contact Us</a>
           </div>
         </div>
     </section>

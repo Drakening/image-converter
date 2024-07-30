@@ -13,10 +13,10 @@ const Footer = () => {
         <ScrollLink to="terms" smooth={true} duration={500} className="footer-link">Terms</ScrollLink>
       </div>
       <div className="footer-social">
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+        <a href="https://www.linkedin.com/in/thando-mkhonza-644453263" target="_blank" rel="noopener noreferrer" className="footer-social-link">
           <FaLinkedin />
         </a>
-        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+        <a href="https://github.com/Drakening" target="_blank" rel="noopener noreferrer" className="footer-social-link">
           <FaGithub />
         </a>
       </div>

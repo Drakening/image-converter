@@ -52,7 +52,7 @@ const Steps = () => {
                 </div>
                 <div className="cardBottom">
                     <h3>Download the files</h3>
-                    <p>nce the conversion is done, you can download the files by clicking Download button</p>
+                    <p>Once the conversion is done, you can download the files by clicking Download button</p>
                 </div>
             </div>
             
