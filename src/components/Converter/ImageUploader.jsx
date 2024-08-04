@@ -98,6 +98,11 @@ const ImageUploader = () => {
                 <option value="webp">WEBP</option>
                 <option value="ico">ICO</option>
               </select>
+              <div className="progress-container">
+                <div className="progress-bar" style={{ width: `${fileWrapper.progress}%` }}>
+                  {fileWrapper.progress}%
+                </div>
+              </div>
               <button onClick={() => handleConvert(index)}>Convert</button>
               {fileWrapper.convertedFile && (
                 <a href={fileWrapper.convertedFile} download={`converted.${fileWrapper.format}`}>
@@ -106,11 +111,7 @@ const ImageUploader = () => {
               )}
             </div>
             <button className="remove-button" onClick={() => handleRemove(index)}>X</button>
-            <div className="progress-container">
-              <div className="progress-bar" style={{ width: `${fileWrapper.progress}%` }}>
-                {fileWrapper.progress}%
-              </div>
-            </div>
+            
           </div>
         ))}
       </div>

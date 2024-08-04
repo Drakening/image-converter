@@ -1,32 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaGithub } from 'react-icons/fa';
-import styles from './Navbar.module.css';
+import React from "react";
 
-function Navbar() {
+import styles from "./Navbar.module.css";
+
+export function Navbar() {
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <Link to="/" className={`${styles.link} lg:text-xl`}>
-          FileFlexConverter
-        </Link>
-        <div className="flex flex-row items-center h-full">
-          <Link to="/about" className={styles.textLink}>
-            About
-          </Link>
-
-          <Link
-            id="github"
-            to="https://github.com/rahmadnasutionn/file-flex-converter"
-            className={styles.iconLink}
-          >
-            <FaGithub className={styles.icon} />
-            <span className={styles.screenReaderOnly}>Github Icon</span>
-          </Link>
+    <div className={styles.navbarContainer}>
+      <nav className={styles.navbarMenu}>
+        <div className={styles.linksWrapper}>
+          <ul className={styles.link}>
+              <li><a href="#about">About</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-      </div>
-    </header>
+      </nav>
+    </div>
   );
 }
-
-export default Navbar;

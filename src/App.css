@@ -10,7 +10,7 @@ body {
     background-color: #fff;
     color: #1d1d1d;
     font-family: 'Inter', sans-serif;
-    margin: auto;
+    margin: 0 auto;
     max-width: 1440px;
     display: flex;
     justify-content: center;
@@ -21,3 +21,10 @@ body {
     margin-bottom: 20px;
   }
   
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
