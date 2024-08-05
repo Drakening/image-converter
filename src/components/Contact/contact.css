@@ -40,7 +40,8 @@
     
     .description2 a {
       color: #fff;
-      background-color: #1d1d1d;
+      background: #2980ac;
+      
       text-decoration: none;
       padding: 1.1rem 5rem;
       display: inline-block;
@@ -52,7 +53,7 @@
     }
     
     .description2 a:hover {
-      background: #2980ac;
+      background-color: #1d1d1d;
       border: none;
       text-decoration: none;
     }

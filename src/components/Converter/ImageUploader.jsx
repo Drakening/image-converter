@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import { toast, Toaster } from 'sonner';
+import { FaImage } from 'react-icons/fa';
 import './imageUploader.css';
 
 const ImageUploader = () => {
@@ -87,7 +88,7 @@ const ImageUploader = () => {
       <div className="file-list">
         {files.map((fileWrapper, index) => (
           <div key={index} className="file-item">
-            <img src={URL.createObjectURL(fileWrapper.file)} alt={fileWrapper.file.name} className="thumbnail" />
+            <FaImage className="thumbnail" />
             <div className="file-details">
               <p>{fileWrapper.file.name}</p>
               <p>{fileWrapper.file.type}</p>
@@ -100,18 +101,18 @@ const ImageUploader = () => {
               </select>
               <div className="progress-container">
                 <div className="progress-bar" style={{ width: `${fileWrapper.progress}%` }}>
-                  {fileWrapper.progress}%
+                  {fileWrapper.progress > 0 && fileWrapper.progress + '%'}
                 </div>
               </div>
-              <button onClick={() => handleConvert(index)}>Convert</button>
-              {fileWrapper.convertedFile && (
+              {fileWrapper.convertedFile ? (
                 <a href={fileWrapper.convertedFile} download={`converted.${fileWrapper.format}`}>
-                  <button>Download</button>
+                  <button className="download-button">Download</button>
                 </a>
+              ) : (
+                <button onClick={() => handleConvert(index)}>Convert</button>
               )}
             </div>
             <button className="remove-button" onClick={() => handleRemove(index)}>X</button>
-            
           </div>
         ))}
       </div>

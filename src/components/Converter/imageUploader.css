@@ -2,7 +2,6 @@
   text-align: center;
   width: 80%;
   margin: 1rem auto 8rem;
-
 }
 
 .image-uploader .dropzone {
@@ -40,7 +39,6 @@
   margin-right: .5rem;
 }
 
-
 .image-uploader .dropzone p {
   color: #1d1d1d;
   font-weight: 500;
@@ -68,8 +66,7 @@
 .image-uploader .file-item .thumbnail {
   width: 50px;
   height: 50px;
-  object-fit: cover;
-  border-radius: 5px;
+  color: #2980ac;
   margin-right: 10px;
 }
 
@@ -87,7 +84,7 @@
 
 .image-uploader select,
 .image-uploader button {
-  background-color: #444444;
+  background-color: #2980ac;
   color: #ffffff;
   font-size: 18px;
   cursor: pointer;
@@ -96,7 +93,7 @@
 
 .image-uploader select:hover,
 .image-uploader button:hover {
-  background-color: #444444;
+  background-color: #2980ac;
 }
 
 .image-uploader button {
@@ -126,20 +123,33 @@
 .image-uploader .progress-container {
   height: 10px;
   width: 80px;
-  background-color: #444444;
+  background-color: #ffffff;
+  border: 2px solid #42d13d;
   border-radius: 5px;
+  margin-right: 10px;
 }
 
 .image-uploader .progress-bar {
   height: 100%;
   background-color: #42d13d;
   border-radius: 5px;
-  text-align: center;
-  color: #000000;
   line-height: 10px;
   font-size: 14px;
   text-align: center;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.download-button {
+  background-color: #42d13d;
+  border: 1px solid #42d13d;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.download-button:hover {
+  background-color: #3cb43b;
 }

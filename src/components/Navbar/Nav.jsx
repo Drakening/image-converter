@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import styles from './Nav.module.css';
 import { FiHome, FiInfo, FiMail } from 'react-icons/fi';
+import { Link as ScrollLink } from 'react-scroll';
 
-const Navbar = () => {
+const Nav = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const controls = useAnimation();
@@ -38,29 +39,46 @@ const Navbar = () => {
       initial={{ opacity: 1, y: 0 }}
       animate={controls}
     >
-      <a className={`${styles.navLink} ${styles.navLinkDark}`} href="/">
-        <span className="block sm:hidden">
-          <FiHome className={styles.icon} />
-        </span>
-        <span className={`${styles.navText} sm:block`}>Home</span>
+      <ScrollLink
+        className={styles.navLink}
+        to="home"
+        smooth={true}
+        duration={500}
+      >
+        <FiHome className={styles.icon} />
+        <span className={styles.navText}>Home</span>
+      </ScrollLink>
+
+      <ScrollLink
+        className={styles.navLink}
+        to="about"
+        smooth={true}
+        duration={500}
+      >
+        <FiInfo className={styles.icon} />
+        <span className={styles.navText}>About</span>
+      </ScrollLink>
+
+      <ScrollLink
+        className={styles.navLink}
+        to="contact"
+        smooth={true}
+        duration={500}
+      >
+        <FiMail className={styles.icon} />
+        <span className={styles.navText}>Contact</span>
+      </ScrollLink>
+
+      <a
+        className={styles.button}
+        href="https://github.com/Drakening/image-converter"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>Github</span>
       </a>
-      <a className={`${styles.navLink} ${styles.navLinkDark}`} href="/about">
-        <span className="block sm:hidden">
-          <FiInfo className={styles.icon} />
-        </span>
-        <span className={`${styles.navText} sm:block`}>About</span>
-      </a>
-      <a className={`${styles.navLink} ${styles.navLinkDark}`} href="/contact">
-        <span className="block sm:hidden">
-          <FiMail className={styles.icon} />
-        </span>
-        <span className={`${styles.navText} sm:block`}>Contact</span>
-      </a>
-      <button>
-        <span>Login</span>
-      </button>
     </motion.div>
   );
 };
 
-export default Navbar;
+export default Nav;
