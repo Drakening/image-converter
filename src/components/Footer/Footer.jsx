@@ -7,10 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-links">
-        <ScrollLink to="about" smooth={true} duration={500} className="footer-link">About Us</ScrollLink>
-        <ScrollLink to="contact" smooth={true} duration={500} className="footer-link">Contact Us</ScrollLink>
-        <ScrollLink to="privacy" smooth={true} duration={500} className="footer-link">Privacy</ScrollLink>
-        <ScrollLink to="terms" smooth={true} duration={500} className="footer-link">Terms</ScrollLink>
+        Copyright @2024 Chameleon All Rights Reserved
       </div>
       <div className="footer-social">
         <a href="https://www.linkedin.com/in/thando-mkhonza-644453263" target="_blank" rel="noopener noreferrer" className="footer-social-link">
