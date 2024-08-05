@@ -2,14 +2,13 @@ import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import { toast, Toaster } from 'sonner';
-import { FaImage } from 'react-icons/fa';
+import { FaImage, FaTrash } from 'react-icons/fa';
 import './imageUploader.css';
 
 const ImageUploader = () => {
   const [files, setFiles] = useState([]);
 
   const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
-    // Handle rejected files
     if (rejectedFiles.length > 0) {
       rejectedFiles.forEach(file => {
         toast.error(`File type not accepted: ${file.file.name}`);
@@ -112,7 +111,9 @@ const ImageUploader = () => {
                 <button onClick={() => handleConvert(index)}>Convert</button>
               )}
             </div>
-            <button className="remove-button" onClick={() => handleRemove(index)}>X</button>
+            <button className="remove-button" onClick={() => handleRemove(index)}>
+              <FaTrash />
+            </button>
           </div>
         ))}
       </div>

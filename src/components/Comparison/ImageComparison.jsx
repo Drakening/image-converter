@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Features from '../Features/Features'
 import './ImageComparison.css';
 import beforeImage from '../../assets/before.jpg';
-import afterImage from '../../assets/after.jpg';
+import afterImage from '../../assets/after.webp';
 
 const ImageComparison = () => {
   const [sliderValue, setSliderValue] = useState(50);

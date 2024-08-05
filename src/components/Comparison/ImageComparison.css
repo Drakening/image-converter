@@ -21,7 +21,7 @@
   color: #626570;
 }
     .image-comparison {
-    max-width: 42rem;
+    max-width: 80%;
     margin: 20px auto;
     border-radius: 20px;
     overflow: hidden;
@@ -43,6 +43,10 @@
     position: absolute;
     top: 0;
     width: 50%;
+  }
+  .before-image,
+  .after-image {
+    width: 100%;
   }
   
   .image-comparison .slider {

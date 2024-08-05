@@ -93,15 +93,11 @@
 
 .image-uploader select:hover,
 .image-uploader button:hover {
-  background-color: #2980ac;
+  background-color: #1f6a8c;
 }
 
 .image-uploader button {
   border: 1px solid #2980ac;
-}
-
-.image-uploader button:hover {
-  background-color: #2980ac;
 }
 
 .image-uploader .remove-button {
@@ -126,30 +122,30 @@
   background-color: #ffffff;
   border: 2px solid #42d13d;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-left: 20px;
 }
 
 .image-uploader .progress-bar {
   height: 100%;
   background-color: #42d13d;
   border-radius: 5px;
-  line-height: 10px;
-  font-size: 14px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  line-height: 10px;
 }
 
-.download-button {
-  background-color: #42d13d;
-  border: 1px solid #42d13d;
-  color: #ffffff;
-  font-size: 18px;
+.image-uploader .download-button {
+  padding: 0.5rem 1rem;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 0.5rem;
   cursor: pointer;
+  color: white;
+  font-weight: bold;
+  margin-left: 1rem;
   transition: background-color 0.2s;
 }
 
-.download-button:hover {
-  background-color: #3cb43b;
+.image-uploader .download-button:hover {
+  background-color: #27ae60;
 }
