@@ -21,7 +21,7 @@
   color: #626570;
 }
     .image-comparison {
-    max-width: 80%;
+    max-width: 46rem;
     margin: 20px auto;
     border-radius: 20px;
     overflow: hidden;
@@ -83,11 +83,15 @@
   .Description {
     font-size: 16px;
   }
+  .image-comparison {
+    max-width: 28rem;
+  }
 
   .before-image,
   .after-image {
     width: 100%;
   }
+
 }
 
 /* Small Tablets and Large Phones */
@@ -98,5 +102,8 @@
 
   .Description {
     font-size: 18px;
+  }
+  .image-comparison {
+    max-width: 38rem;
   }
 }

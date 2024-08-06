@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import './footer.css';
 
