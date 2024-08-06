@@ -1,83 +1,87 @@
-
 .contactUs {
-    background: #fff;
-    margin-bottom: 4rem;
-    }
-    
-    .contactContainer {
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5rem 3rem;
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    
-    .contactTitle {
-    font-size: 2.25rem;
-    line-height: normal;
-    text-align: center;
-    font-weight: 700;
-    }
-    .color {
-      color: #2980ac;
-    }
-    .description1 {
-      font-size: 20px;
-      font-weight: 300;
-      color: #626570;
-      text-align: center;
-      max-width: 65%;
-      justify-self: center;
-    }
-    
-    .description2 {
-      color: #fff;
-      text-align: center;
-    }
-    
-    .description2 a {
-      color: #fff;
-      background: #2980ac;
-      
-      text-decoration: none;
-      padding: 1.1rem 5rem;
-      display: inline-block;
-      border-radius: 5px;
-      transition: all 0.3s ease-in-out;
-      text-transform: uppercase;
-      font-weight: 500;
-      transition: all .5s;
-    }
-    
-    .description2 a:hover {
-      background-color: #1d1d1d;
-      border: none;
-      text-decoration: none;
-    }
-    
-  
-    @media screen and (max-width: 866px) {
-      .description1 {
-        max-width: 95%;
-      }
-    }
-    
-    @media screen and (max-width: 500px) {
-      .contactTitle {
-        font-size: 2.3rem;
-      }
-    
-      .description2 a {
-        padding: 1.2rem 4rem;
-        font-size: 1.5rem;
-      }
-    }
-     
-    @media screen and (max-width: 350px) {
-      .contactTitle {
-        font-size: 1.5rem;
-      }
-    }
+  background: #fff;
+  margin-bottom: 4rem;
+}
+
+.contactContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 3rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contactTitle {
+  font-size: 2.25rem;
+  line-height: normal;
+  text-align: center;
+  font-weight: 700;
+}
+
+.color {
+  color: #2980ac;
+}
+
+.description1 {
+  font-size: 20px;
+  font-weight: 300;
+  color: #626570;
+  text-align: center;
+  max-width: 65%;
+  justify-self: center;
+}
+
+.description2 {
+  color: #fff;
+  text-align: center;
+}
+
+.description2 a {
+  color: #fff;
+  background: #2980ac;
+  text-decoration: none;
+  padding: 1.1rem 5rem;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all .5s;
+}
+
+.description2 a:hover {
+  background-color: #1d1d1d;
+  border: none;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 866px) {
+  .description1 {
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contactTitle {
+    font-size: 2.3rem;
+  }
+
+  .description2 a {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contactTitle {
+    font-size: 1.5rem;
+  }
+
+  .description2 a {
+    padding: 0.8rem 2.5rem;
+    font-size: 1rem;
+  }
+}

@@ -5,7 +5,20 @@ const path = require('path');
 const cors = require('cors');
 
 const app = express(); 
-const upload = multer({ dest: 'uploads/' }); // Configure multer to save uploaded files to the 'uploads' directory
+
+// File filter to accept only image files
+const fileFilter = (req, file, cb) => {
+  if (file.mimetype.startsWith('image/')) {
+    cb(null, true);
+  } else {
+    cb(new Error('Incorrect format'), false);
+  }
+};
+
+const upload = multer({ 
+  dest: 'uploads/',
+  fileFilter: fileFilter 
+}); // Configure multer to save uploaded files to the 'uploads' directory
 
 app.use(cors());
 
@@ -36,6 +49,14 @@ app.post('/convert', upload.single('file'), async (req, res) => {
     // Handle errors during the conversion process
     res.status(500).send('Error converting file');
   }
+});
+
+// Error handling middleware for multer
+app.use((err, req, res, next) => {
+  if (err.message === 'Incorrect format') {
+    return res.status(400).send('Incorrect file format');
+  }
+  next(err);
 });
 
 // Start the server and listen on port 5000
