@@ -11,7 +11,7 @@ import './App.css';
 
 const Homepage = () => {
   return (
-    <main>
+    <>
       <div id="home">
         <Hero />
       </div>
@@ -25,7 +25,7 @@ const Homepage = () => {
         <Contact />
       </div>
       <Footer />
-    </main>
+    </>
   );
 }
 

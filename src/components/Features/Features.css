@@ -40,12 +40,24 @@
     font-size: 1em;
     color: #626570;
   }
+  @media (max-width: 600px) {
+    .features-section {
+      padding: 20px 10px;
+  }
+  .features-cards {
+    max-width: 425px;
+}
+.feature-card h3 {
+  font-size: 1.3em;
+}
+  }
   
   @media (max-width: 768px) {
     .features-cards {
       flex-direction: column;
       align-items: center;
-    }
+      margin: auto;
+  }
   
     .feature-card {
       max-width: 90%;

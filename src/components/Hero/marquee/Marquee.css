@@ -1,0 +1,52 @@
+.marquee-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 120px;
+    height: 48px;
+    background-color: #f0f0f0;
+  }
+  
+  .marquee {
+    display: flex;
+    gap: 8px; 
+    animation: marquee 20s linear infinite;
+  }
+  
+  .marquee img {
+    width: 48px; 
+    max-height: 48px;
+    object-fit: cover;
+  }
+  
+  .marquee.gradient-left,
+  .marquee.gradient-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30%; 
+    pointer-events: none;
+  }
+  
+  .marquee.gradient-left {
+    left: 0;
+    background: linear-gradient(to right, #f0f0f0, rgba(240, 240, 240, 0));
+  }
+  
+  .marquee.gradient-right {
+    right: 0;
+    background: linear-gradient(to left, #f0f0f0, rgba(240, 240, 240, 0));
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

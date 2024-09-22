@@ -105,11 +105,26 @@
   }
   
   /* Responsive Styles */
+  @media (max-width: 400px) {
+    .stepsHeading {
+        padding-bottom: 0.5rem;
+    }
+}
   @media (max-width: 600px) {
     .steps-section {
-      padding: 0 2rem;
+      padding: 0 1rem;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
     
+    .stepsHeading {
+      max-width: 26rem;
+      width: 100%;
+      gap: 0;
+      margin: auto;
+      padding-bottom: 0.5rem;
+  }
+  
     .title {
       font-size: 1.625rem; /* 26px */
     }
@@ -119,7 +134,7 @@
       line-height: 1.5rem;
     }
     .stepCard {
-      width: 24rem;
+      max-width: 24rem;
   }
     
     .stepsCols {

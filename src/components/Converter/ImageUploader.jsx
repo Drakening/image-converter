@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import { toast, Toaster } from 'sonner';
-import { FaImage, FaTrash } from 'react-icons/fa';
+import { FaImage } from 'react-icons/fa';
 import './imageUploader.css';
 
 const ImageUploader = () => {
@@ -89,30 +89,40 @@ const ImageUploader = () => {
           <div key={index} className="file-item">
             <FaImage className="thumbnail" />
             <div className="file-details">
-              <p>{fileWrapper.file.name}</p>
-              <p>{fileWrapper.file.type}</p>
-              <select value={fileWrapper.format} onChange={(e) => handleFormatChange(e, index)}>
-                <option value="png">PNG</option>
-                <option value="jpg">JPG</option>
-                <option value="jpeg">JPEG</option>
-                <option value="webp">WEBP</option>
-                <option value="ico">ICO</option>
-              </select>
-              <div className="progress-container">
+
+              <div className="file-info">
+                <p class="file-name">{fileWrapper.file.name}</p>
+                <p class="file-progress">Ready to convert</p>
+              </div>
+                
+              <div className="file-action">
+                  <select className="format-select" value={fileWrapper.format} onChange={(e) => handleFormatChange(e, index)}>
+                    <option value="png">PNG</option>
+                    <option value="jpg">JPG</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="webp">WEBP</option>
+                    <option value="ico">ICO</option>
+                  </select>
+              </div>
+              
+              {/* <div className="progress-container">
                 <div className="progress-bar" style={{ width: `${fileWrapper.progress}%` }}>
                   {fileWrapper.progress > 0 && fileWrapper.progress + '%'}
                 </div>
-              </div>
+              </div> */}
+              <div className="file-action">
               {fileWrapper.convertedFile ? (
                 <a href={fileWrapper.convertedFile} download={`converted.${fileWrapper.format}`}>
                   <button className="download-button">Download</button>
                 </a>
               ) : (
-                <button onClick={() => handleConvert(index)}>Convert</button>
+                <button className="convert-button" onClick={() => handleConvert(index)}>Convert</button>
               )}
+              </div>
+              
             </div>
             <button className="remove-button" onClick={() => handleRemove(index)}>
-              <FaTrash />
+              x
             </button>
           </div>
         ))}
