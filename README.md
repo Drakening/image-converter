@@ -20,6 +20,4 @@ Chameleon supports a wide range of image formats including JPEG, PNG, GIF, and m
 
 There are size limits to ensure quick processing, but they are generous enough to accommodate most needs.
 
-## Deployment
 
-To deploy this project, run the following command:
