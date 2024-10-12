@@ -180,37 +180,14 @@
       align-items: stretch;
   }
   .file-info, .file-action {
-      flex-basis: auto;
-      margin-bottom: 10px;
+    flex-basis: auto;
+        margin-bottom: 10px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
   }
-}
-@media (max-width: 400px) {
-  .image-uploader {
-    width: 90%;
-}
-.dropzone {
-  height: 14rem;
-}
 }
 
-@media (max-width: 600px) {
-  .image-uploader {
-    margin: 1rem auto 2rem;
-    width: 80%;
-  }
-  .primaryButton {
-    padding: .5rem 1rem;
-    height: 60px;
-  }
-  .file-details {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .file-info, .file-action {
-    flex-basis: auto;
-    margin-bottom: 10px;
-  }
-}
 
 @media (max-width: 400px) {
   .image-uploader {
@@ -219,21 +196,7 @@
   .dropzone {
     height: 14rem;
   }
-  .file-item {
-    flex-wrap: wrap;
-  }
-  .file-details {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .file-info {
-    flex-basis: 100%;
-    margin-bottom: 10px;
-  }
-  .file-action {
-    flex-basis: 50%;
-    padding: 0 5px;
-  }
+ 
   .file-action:last-child {
     margin-top: 10px;
   }
@@ -241,25 +204,5 @@
   .convert-button,
   .download-button {
     max-width: 100%;
-  }
-}
-
-@media (min-width: 370px) and (max-width: 400px) {
-  .file-item {
-    padding: 12px 8px;
-  }
-  .thumbnail {
-    width: 40px;
-    height: 40px;
-  }
-  .file-name,
-  .file-progress {
-    font-size: 0.9rem;
-  }
-  .format-select,
-  .convert-button,
-  .download-button {
-    font-size: 0.8rem;
-    padding: 6px 0;
   }
 }
