@@ -7,6 +7,7 @@ import './imageUploader.css';
 
 const ImageUploader = () => {
   const [files, setFiles] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
     if (rejectedFiles.length > 0) {
@@ -42,13 +43,14 @@ const ImageUploader = () => {
   };
 
   const handleConvert = async (index) => {
+    setIsLoading(true);
     const fileToConvert = files[index];
     const formData = new FormData();
     formData.append('file', fileToConvert.file);
     formData.append('format', fileToConvert.format);
 
     try {
-      const response = await axios.post('http://localhost:5000/convert', formData, {
+      const response = await axios.post('https://server-mqak.onrender.com/convert', formData, {
         responseType: 'blob',
         onUploadProgress: (progressEvent) => {
           const progress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
@@ -62,9 +64,18 @@ const ImageUploader = () => {
       newFiles[index].convertedFile = URL.createObjectURL(response.data);
       newFiles[index].progress = 100;
       setFiles(newFiles);
+      toast.success('File converted successfully');
     } catch (error) {
-      toast.error('Error converting file');
+      if (error.response) {
+        toast.error(`Error: ${error.response.data}`);
+      } else if (error.request) {
+        toast.error('No response received from server. Please try again.');
+      } else {
+        toast.error('Error converting file. Please try again.');
+      }
       console.error('Error converting file:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -89,37 +100,40 @@ const ImageUploader = () => {
           <div key={index} className="file-item">
             <FaImage className="thumbnail" />
             <div className="file-details">
-
               <div className="file-info">
-                <p class="file-name">{fileWrapper.file.name}</p>
-                <p class="file-progress">Ready to convert</p>
+                <p className="file-name">{fileWrapper.file.name}</p>
+                <p className="file-progress">
+                  {fileWrapper.progress === 0
+                    ? 'Ready to convert'
+                    : fileWrapper.progress === 100
+                    ? 'Conversion complete'
+                    : `Converting: ${fileWrapper.progress}%`}
+                </p>
               </div>
-                
               <div className="file-action">
-                  <select className="format-select" value={fileWrapper.format} onChange={(e) => handleFormatChange(e, index)}>
-                    <option value="png">PNG</option>
-                    <option value="jpg">JPG</option>
-                    <option value="jpeg">JPEG</option>
-                    <option value="webp">WEBP</option>
-                    <option value="ico">ICO</option>
-                  </select>
+                <select className="format-select" value={fileWrapper.format} onChange={(e) => handleFormatChange(e, index)}>
+                  <option value="png">PNG</option>
+                  <option value="jpg">JPG</option>
+                  <option value="jpeg">JPEG</option>
+                  <option value="webp">WEBP</option>
+                  <option value="ico">ICO</option>
+                </select>
               </div>
-              
-              {/* <div className="progress-container">
-                <div className="progress-bar" style={{ width: `${fileWrapper.progress}%` }}>
-                  {fileWrapper.progress > 0 && fileWrapper.progress + '%'}
-                </div>
-              </div> */}
               <div className="file-action">
-              {fileWrapper.convertedFile ? (
-                <a href={fileWrapper.convertedFile} download={`converted.${fileWrapper.format}`}>
-                  <button className="download-button">Download</button>
-                </a>
-              ) : (
-                <button className="convert-button" onClick={() => handleConvert(index)}>Convert</button>
-              )}
+                {fileWrapper.convertedFile ? (
+                  <a href={fileWrapper.convertedFile} download={`converted.${fileWrapper.format}`}>
+                    <button className="download-button">Download</button>
+                  </a>
+                ) : (
+                  <button
+                    className="convert-button"
+                    onClick={() => handleConvert(index)}
+                    disabled={isLoading}
+                  >
+                    {isLoading ? 'Converting...' : 'Convert'}
+                  </button>
+                )}
               </div>
-              
             </div>
             <button className="remove-button" onClick={() => handleRemove(index)}>
               x
