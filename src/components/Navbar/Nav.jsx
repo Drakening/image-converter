@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import styles from './Nav.module.css';
 import { FiHome, FiInfo, FiMail } from 'react-icons/fi';
@@ -9,13 +9,14 @@ const Nav = () => {
   const [visible, setVisible] = useState(true);
   const controls = useAnimation();
 
-  const handleScroll = () => {
+  // Memoize handleScroll to prevent it from being a changing dependency
+  const handleScroll = useCallback(() => {
     const currentScrollPos = window.pageYOffset;
     const visible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
 
     setVisible(visible);
     setPrevScrollPos(currentScrollPos);
-  };
+  }, [prevScrollPos]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -23,7 +24,7 @@ const Nav = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prevScrollPos]);
+  }, [handleScroll]);
 
   useEffect(() => {
     controls.start({
