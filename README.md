@@ -7,8 +7,27 @@ Chameleon is a powerful web application that allows users to convert images to v
 
 https://chameleoner.netlify.app
 
+## Build With
 
-![image converter](https://github.com/user-attachments/assets/74a9c5d0-ec5b-44b5-a093-cbaba4c1242c)
+### Frontend
+
+- React
+- react-toast
+- framer-motion
+- react-dropzone
+- react-icons
+- react-router-dom
+- react-scroll
+- sonner
+
+### Backend
+
+- Express
+- Axios
+- CORS
+- Multer
+- Sharp
+- react-dropzone
 
 ## Features
 
@@ -25,5 +44,9 @@ Chameleon supports a wide range of image formats including JPEG, PNG, GIF, and m
 #### Is there a limit on the size of the images I can upload?
 
 There are size limits to ensure quick processing, but they are generous enough to accommodate most needs.
+
+
+![image converter](https://github.com/user-attachments/assets/74a9c5d0-ec5b-44b5-a093-cbaba4c1242c)
+
 
 
