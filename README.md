@@ -12,22 +12,16 @@ https://chameleoner.netlify.app
 ### Frontend
 
 - React
-- react-toast
 - framer-motion
-- react-dropzone
-- react-icons
-- react-router-dom
-- react-scroll
 - sonner
 
 ### Backend
 
+- Node
 - Express
 - Axios
 - CORS
 - Multer
-- Sharp
-- react-dropzone
 
 ## Features
 
